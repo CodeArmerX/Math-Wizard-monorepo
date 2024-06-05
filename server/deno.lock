@@ -1,0 +1,19 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@hono/hono@^4.4.2": "jsr:@hono/hono@4.4.2"
+    },
+    "jsr": {
+      "@hono/hono@4.4.2": {
+        "integrity": "7407c182bf52246f251bcf7f370112945a624e165fc8fd67857494425e492ef1"
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "jsr:@hono/hono@^4.4.2"
+    ]
+  }
+}

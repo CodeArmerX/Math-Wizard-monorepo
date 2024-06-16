@@ -6,7 +6,7 @@ import { sign, verify } from 'hono/jwt'
 import { compare, hash } from 'bcrypt'
 import { Role } from '../schemas/models.types.ts'
 import { ulid } from '../main.ts'
-import { sendRecoveryEmail } from '../services/smtp.ts'
+import { sendRecoveryEmail } from '../services/resend.ts'
 import { passwordRecoverySchema } from '../schemas/schemas.ts'
 import { authMiddleware } from '../middlewares/authMiddleware.ts'
 import {

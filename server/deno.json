@@ -7,7 +7,6 @@
     "kv"
   ],
   "imports": {
-    "@xtool/smtp": "jsr:@xtool/smtp@^0.1.0",
     "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts",
     "hono": "jsr:@hono/hono@^4.4.2",
     "ulid": "https://deno.land/x/ulid@v0.3.0/mod.ts",

@@ -14,7 +14,7 @@
     "zod": "https://deno.land/x/zod@v3.23.8/mod.ts"
   },
   "tasks": {
-    "start": "deno serve --watch --allow-env ./src/main.ts",
+    "start": "deno serve --watch --allow-env --allow-net --allow-read ./src/main.ts",
     "dev": "deno run --watch --unstable --allow-net --allow-read ./src/main.ts"
   },
   "compilerOptions": {

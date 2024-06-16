@@ -8,7 +8,7 @@ export const db = await Deno.openKv()
 const app = new Hono()
 
 app.get('/', (c) => {
-  return c.text('Hello Hono!')
+  return c.text('Welcome to the Math Wizard API!')
 })
 app.route('/api/courses/', courses)
 app.route('/api/auth/', auth)

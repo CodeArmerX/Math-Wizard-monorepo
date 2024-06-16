@@ -2,19 +2,11 @@ import { Resend } from 'npm:resend'
 
 const resend = new Resend('re_dbWqsoWE_3F6nirWQdMbSAubsPwZKHyiS')
 
-resend.emails.send({
-  from: 'onboarding@resend.dev',
-  to: 'geanmotas@gmail.com',
-  subject: 'Hello World',
-  html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
-})
-
 function generateRecoveryCode() {
   const random = Math.random() * 1000000
   const code = Math.floor(random)
   return code
 }
-
 export async function sendRecoveryEmail(email: string) {
   if (!email) return
   const code = generateRecoveryCode()

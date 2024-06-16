@@ -1,15 +1,18 @@
-import { withExpoSnack } from 'nativewind'
-import { Landing } from './src/routes/landing'
 import { Routes, Route, NativeRouter } from 'react-router-native'
-import { Text } from 'react-native'
+import { withExpoSnack } from 'nativewind'
+import { SignIn } from './src/routes/SignIn'
+import { Register } from './src/routes/Register'
+import { Home } from './src/routes/Home'
+import { Layout } from './src/layout/Layout'
 
 const App = () => {
   return (
+
     <NativeRouter>
       <Routes>
-        <Route path='/' element={<Landing />} />
-        <Route path='/signin' element={<Text>Sign In</Text>} />
-        <Route path='/register' element={<Text>Register</Text>} />
+        <Route path='/' element={<Layout><Home /></Layout>} />
+        <Route path='/signin' element={<Layout><SignIn /></Layout>} />
+        <Route path='/register' element={<Layout><Register /></Layout>} />
       </Routes>
     </NativeRouter>
   )

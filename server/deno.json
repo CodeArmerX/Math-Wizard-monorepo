@@ -7,10 +7,13 @@
     "kv"
   ],
   "imports": {
-    "hono": "jsr:@hono/hono@^4.4.2"
+    "hono": "jsr:@hono/hono@^4.4.2",
+    "bcrypt":"https://deno.land/x/bcrypt@v0.4.1/mod.ts",
+    "ulid": "https://deno.land/x/ulid@v0.3.0/mod.ts",
+    "zod": "https://deno.land/x/zod@v3.23.8/mod.ts"
   },
   "tasks": {
-    "start": "deno serve --watch ./src/main.ts",
+    "start": "deno serve --watch --allow-env ./src/main.ts",
     "dev": "deno run --watch --unstable --allow-net --allow-read ./src/main.ts"
   },
   "compilerOptions": {

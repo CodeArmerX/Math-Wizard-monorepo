@@ -17,7 +17,7 @@ import {
   getUserVerificationCode,
   updateUserVerificationCode,
 } from '../models/users.ts'
-import { postAuthSchema, verifyEmailSchema } from '../schemas/schemas.ts'
+import { authSchema, verifyEmailSchema } from '../schemas/schemas.ts'
 
 export const auth = new Hono()
 
@@ -36,7 +36,7 @@ const errorResponse = new Response(
 auth.post(
   '/',
   validator('json', (value, _c) => {
-    const parsedBody = postAuthSchema.safeParse(value)
+    const parsedBody = authSchema.safeParse(value)
     if (!parsedBody.success) {
       throw new HTTPException(400, {
         message: 'Invalid request body',

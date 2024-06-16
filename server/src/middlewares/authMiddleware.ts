@@ -20,6 +20,11 @@ export const authMiddleware = (options: {
       }
       const userAuth = await verify(token, secret) as UserAuth
       const user = await getUserByID(userAuth.id)
+      if (!user) {
+        throw new HTTPException(401, {
+          message: 'User not found',
+        })
+      }
       if (user && !authorizedRoles.includes(user.role)) {
         throw new HTTPException(401, {
           message: 'User is not authorized to access this resource',

@@ -1,5 +1,6 @@
 export interface Course {
   id?: string
+  title: string
   front: string
   description: string
   badge: string
@@ -19,14 +20,14 @@ interface Component {
   content: string
 }
 export interface Text extends Component {
-  type: 'text'
+  type: string
 }
 export interface Image extends Component {
-  type: 'image'
+  type: string
   source: string
 }
 export interface Link extends Component {
-  type: 'link'
+  type: string
   source: string
   sourceType: 'url' | 'pdf' | 'video'
 }

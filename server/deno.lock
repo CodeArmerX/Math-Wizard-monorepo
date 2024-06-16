@@ -3,12 +3,35 @@
   "packages": {
     "specifiers": {
       "jsr:@hono/hono@^4.4.2": "jsr:@hono/hono@4.4.2",
+      "jsr:@std/assert@^0.223.0": "jsr:@std/assert@0.223.0",
+      "jsr:@std/bytes@^0.223.0": "jsr:@std/bytes@0.223.0",
+      "jsr:@std/io@0.223.0": "jsr:@std/io@0.223.0",
+      "jsr:@xtool/smtp@^0.1.0": "jsr:@xtool/smtp@0.1.0",
       "npm:@hono/zod-validator": "npm:@hono/zod-validator@0.1.11_hono@4.0.5_zod@3.22.4",
       "npm:superjson@1.13.3": "npm:superjson@1.13.3"
     },
     "jsr": {
       "@hono/hono@4.4.2": {
         "integrity": "7407c182bf52246f251bcf7f370112945a624e165fc8fd67857494425e492ef1"
+      },
+      "@std/assert@0.223.0": {
+        "integrity": "eb8d6d879d76e1cc431205bd346ed4d88dc051c6366365b1af47034b0670be24"
+      },
+      "@std/bytes@0.223.0": {
+        "integrity": "84b75052cd8680942c397c2631318772b295019098f40aac5c36cead4cba51a8"
+      },
+      "@std/io@0.223.0": {
+        "integrity": "2d8c3c2ab3a515619b90da2c6ff5ea7b75a94383259ef4d02116b228393f84f1",
+        "dependencies": [
+          "jsr:@std/assert@^0.223.0",
+          "jsr:@std/bytes@^0.223.0"
+        ]
+      },
+      "@xtool/smtp@0.1.0": {
+        "integrity": "c80c1c9e967818ec0fed6297119bdbc9e4d89d9da789c718d930146bc99a0141",
+        "dependencies": [
+          "jsr:@std/io@0.223.0"
+        ]
       }
     },
     "npm": {
@@ -70,7 +93,8 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@hono/hono@^4.4.2"
+      "jsr:@hono/hono@^4.4.2",
+      "jsr:@xtool/smtp@^0.1.0"
     ]
   }
 }

@@ -6,7 +6,7 @@ import { sign, verify } from 'hono/jwt'
 import { compare, hash } from 'bcrypt'
 import { Role } from '../schemas/models.types.ts'
 import { ulid } from '../main.ts'
-// import { sendRecoveryEmail } from '../utils/utils.ts'
+import { sendRecoveryEmail } from '../services/smtp.ts'
 import { passwordRecoverySchema } from '../schemas/schemas.ts'
 import { authMiddleware } from '../middlewares/authMiddleware.ts'
 import {
@@ -133,38 +133,38 @@ auth.post(
 
 // #region Recovery email send
 
-// auth.post(
-//   '/recovery',
-//   validator('json', (value, _c) => {
-//     const parsedEmail = verifyEmailSchema.safeParse(value)
-//     if (!parsedEmail.success) {
-//       throw new HTTPException(400, { message: 'Invalid email address' })
-//     }
-//     return parsedEmail.data
-//   }),
-//   async (c) => {
-//     const { email } = c.req.valid('json')
-//     const existingEmail = await getUserByEmail(email)
-//     if (!existingEmail) {
-//       throw new HTTPException(400, {
-//         message:
-//           'Email not found. Please check your email address and try again.',
-//       })
-//     }
-//     const code = await sendRecoveryEmail(email)
-//     if (!code) {
-//       throw new HTTPException(400, {
-//         message:
-//           'Email not found. Please check your email address and try again.',
-//       })
-//     }
-//     await updateUserVerificationCode(email, code)
-//     return c.json({
-//       success: true,
-//       mail: `Verification code send to ${email}`,
-//     })
-//   },
-// )
+auth.post(
+  '/recovery',
+  validator('json', (value, _c) => {
+    const parsedEmail = verifyEmailSchema.safeParse(value)
+    if (!parsedEmail.success) {
+      throw new HTTPException(400, { message: 'Invalid email address' })
+    }
+    return parsedEmail.data
+  }),
+  async (c) => {
+    const { email } = c.req.valid('json')
+    const existingEmail = await getUserByEmail(email)
+    if (!existingEmail) {
+      throw new HTTPException(400, {
+        message:
+          'Email not found. Please check your email address and try again.',
+      })
+    }
+    const code = await sendRecoveryEmail(email)
+    if (!code) {
+      throw new HTTPException(400, {
+        message:
+          'Email not found. Please check your email address and try again.',
+      })
+    }
+    await updateUserVerificationCode(email, code)
+    return c.json({
+      success: true,
+      mail: `Verification code send to ${email}`,
+    })
+  },
+)
 // #region Recovery password
 auth.patch(
   '/recovery',

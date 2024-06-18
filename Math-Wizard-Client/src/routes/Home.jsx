@@ -1,10 +1,4 @@
-import { Text, View, Image } from 'react-native'
-import { styled } from 'nativewind'
-import { StyledLink } from '../components/StyledLink'
-
-const StyledView = styled(View)
-const StyledText = styled(Text)
-const StyledImage = styled(Image)
+import { StyledLink, StyledImage, StyledText, StyledView } from '../components/StyledComponents'
 
 export function Home () {
   return (

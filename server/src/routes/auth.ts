@@ -134,7 +134,7 @@ auth.post(
 // #region Recovery email send
 
 auth.post(
-  '/recovery/',
+  '/recovery',
   validator('json', (value, _c) => {
     const parsedEmail = verifyEmailSchema.safeParse(value)
     if (!parsedEmail.success) {
@@ -167,7 +167,7 @@ auth.post(
 )
 // #region Recovery password
 auth.patch(
-  '/recovery/',
+  '/recovery',
   validator('json', (value, _c) => {
     const parsed = passwordRecoverySchema.safeParse(value)
     if (!parsed.success) {

@@ -49,7 +49,7 @@ export async function sendRecoveryEmail ({ email }) {
 
 export async function updatePassword ({ token, password }) {
   const options = {
-    method: 'POST',
+    method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
     },

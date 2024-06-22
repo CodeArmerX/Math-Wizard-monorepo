@@ -178,7 +178,7 @@ auth.patch(
     }
     return parsed.data
   }),
-  authMiddleware({ roles: [Role.user] }),
+  authMiddleware({ roles: [Role.user,Role.teacher,Role.admin] }),
   async (c) => {
     const token = c.req.header('Authorization')?.slice(7)
     if (!token) {

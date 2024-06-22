@@ -166,7 +166,7 @@ auth.post(
   },
 )
 // #region Recovery password
-auth.patch(
+auth.post(
   '/recovery',
   validator('json', (value, _c) => {
     const parsed = passwordRecoverySchema.safeParse(value)

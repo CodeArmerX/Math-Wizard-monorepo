@@ -27,7 +27,7 @@ function UnitContent () {
             if (component.content.length < 32) {
               return (
                 <StyledText
-                  key={index}
+                  key={unit.content.indexOf(component)}
                   className='text-xl text-center'
                 >{component.content}
                 </StyledText>
@@ -47,14 +47,11 @@ function UnitContent () {
                 key={index}
               >
                 <StyledImage
+                  key={index}
                   className='w-80 h-48'
                   source={{ uri: component.source }}
                 />
               </StyledView>
-            )
-          case 'link':
-            return (
-              <StyledText className='text-xl'>This is a link asasdajkfldsjl</StyledText>
             )
           default:
             return <StyledText key={index}>{component.content}</StyledText>

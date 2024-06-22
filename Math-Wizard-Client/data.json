@@ -1,6 +1,6 @@
 {
-    "title": "",   <-- Título de la unidad
-    "front": "",    <-- Imagen principal de la unidad
+    "title": "Radicacion en R",   <-- Título de la unidad
+    "front": "https://example.com",    <-- Imagen principal de la unidad
     "content": [
         {
             "type": "text",   <-- Tipo de contenido

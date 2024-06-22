@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "Math-Wizard-Client",
-    "slug": "Math-Wizard-Client",
+    "name": "Math Wizard",
+    "slug": "math-wizard",
+    "scheme": "mathwizard",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,6 +23,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

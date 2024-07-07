@@ -1,4 +1,4 @@
-import { StyledLink, StyledImage, StyledText, StyledView } from '../components/StyledComponents'
+import { StyledImage, StyledLink, StyledText, StyledView } from '../components/StyledComponents'
 
 export function Home () {
   return (
@@ -10,13 +10,13 @@ export function Home () {
         source={require('../static/pinguino.png')}
         className='w-64 h-56'
       />
-      <StyledLink to='signin'>
-        <StyledView className='bg-purple-800 px-20 py-3 rounded mt-1 mb-3'>
+      <StyledLink replace href='signin'>
+        <StyledView className='bg-purple-800 px-20 py-3 rounded mt-3 mb-1'>
           <StyledText className='text-xl text-white'>Sign In</StyledText>
         </StyledView>
       </StyledLink>
-      <StyledLink to='register'>
-        <StyledView className='bg-purple-800 px-20 py-3 rounded mt-3'>
+      <StyledLink href='register'>
+        <StyledView className='bg-purple-800 px-20 py-3 rounded mt-1'>
           <StyledText className='text-xl text-white'>Sign Up</StyledText>
         </StyledView>
       </StyledLink>

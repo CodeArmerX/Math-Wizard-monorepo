@@ -1,4 +1,4 @@
-const course = {
+export const course3 = {
   id: '01J0HK6DEF17SD2ZQP0PNZSNHE',
   title: '3rd Year',
   front: 'https://images.pexels.com/photos/240163/pexels-photo-240163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -180,7 +180,7 @@ const course = {
     }
   ]
 }
-const course2 = {
+export const course4 = {
   id: '01J0HK9NJBE8S3FDBF0BM23GKQ',
   title: '4th Year',
   front: 'https://images.pexels.com/photos/6256066/pexels-photo-6256066.jpeg',
@@ -358,7 +358,7 @@ const course2 = {
     }
   ]
 }
-const course3 = {
+export const course5 = {
   id: '01J0HKCQRXQXFJZ3HQ8Z5QQHYW',
   title: '5th Year',
   front: 'https://images.pexels.com/photos/3781338/pexels-photo-3781338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -498,4 +498,4 @@ const course3 = {
     }
   ]
 }
-export const courses = [course, course2, course3]
+export const courses = [course3, course4, course5]

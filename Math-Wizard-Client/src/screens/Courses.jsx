@@ -1,5 +1,5 @@
 import { StyledLink, StyledView, StyledText, StyledImage } from '../components/StyledComponents'
-import { courses } from '../utils/data'
+import { course3, course4, course5 } from '../utils/data'
 
 export function Courses ({ setCourseId }) {
   return (
@@ -7,11 +7,22 @@ export function Courses ({ setCourseId }) {
       <StyledView className='flex-1 mt-8'>
         <StyledText className='text-2xl text-center mt-10'>My Courses</StyledText>
         <StyledView>
-          {courses.map(course => <Course
-            setCourseId={setCourseId}
-            key={course.id} {...course}
-                                 />
-          )}
+          <Course
+            title={course3.title}
+            front={course3.front}
+            to='third'
+          />
+          <Course
+            title={course4.title}
+            front={course4.front}
+            to='fourth'
+          />
+          <Course
+            title={course5.title}
+            front={course5.front}
+            to='fifth'
+          />
+
         </StyledView>
       </StyledView>
     </StyledView>
@@ -20,13 +31,13 @@ export function Courses ({ setCourseId }) {
 function Course ({
   title,
   front,
+  to,
   id,
   setCourseId
 }) {
   return (
     <StyledLink
-      to='/course'
-      onPress={() => setCourseId(id)}
+      to={to}
     >
       <StyledView
         className='p-2 pt-3 mt-3 items-center'

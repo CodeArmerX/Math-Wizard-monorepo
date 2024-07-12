@@ -19,7 +19,6 @@ import {
 } from '../models/users.ts'
 import { authSchema, verifyEmailSchema } from '../schemas/schemas.ts'
 
-console.log('Initializing auth routes')
 export const auth = new Hono()
 
 const secret = Deno.env.get('SECRET') || 'secret'

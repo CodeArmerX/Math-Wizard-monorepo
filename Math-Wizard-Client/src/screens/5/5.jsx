@@ -1,62 +1,42 @@
 import { ScrollView } from 'react-native'
-import { StyledView, StyledText, StyledLink, StyledImage } from '../../components/StyledComponents'
+import { Unit } from '../../components/Unit'
+import { StyledView, StyledText } from '../../components/StyledComponents'
 export function FifthYear () {
   return (
     <ScrollView>
       <StyledView className='pb-28'>
-
         <StyledText className='text-2xl text-center mt-10'>Fifth Year Units</StyledText>
         <Unit
-          title='Radicación en R'
-          front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
-          to='/courses/third/radicacion'
+          title='Ecuaciones Multivariable'
+          front='https://definicion.de/wp-content/uploads/2013/05/algebra.jpg'
+          to='/courses/third/multivariable'
         />
         <Unit
-          title='Orden en R. Desigualdades e inecuaciones'
-          front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
-          to='/courses/third/orden'
+          title='Polinomios'
+          front='https://definicion.de/wp-content/uploads/2013/05/polinomio-1.jpg'
+          to='/courses/third/polinomios'
         />
         <Unit
-          title='El plano Real'
-          front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
-          to='/courses/third/plano'
+          title='Inecuaciones'
+          front='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMosYqTGApN8diW2cmw-OPw0bZrtC4tNVxwQ&s'
+          to='/courses/third/inecuaciones'
         />
         <Unit
-          title='Sistemas lineales'
-          front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
-          to='/courses/third/sistemas'
+          title='Estudio de Cónicas'
+          front='https://dibujotecni.com/wp-content/uploads/2013/01/desarrollos9_cono_transformada.png'
+          to='/courses/third/conicas'
         />
         <Unit
-          title='Función cuadrática'
-          front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
-          to='/courses/third/funcion'
+          title='Límite de una función'
+          front='https://www.funciones.xyz/wp-content/uploads/2021/04/limite-de-una-funcion.png?ezimgfmt=rs:367x368/rscb1/ng:webp/ngcb1'
+          to='/courses/third/limite'
+        />
+        <Unit
+          title='Derivadas de una función'
+          front='https://definicion.de/wp-content/uploads/2011/03/gradiente.jpg'
+          to='/courses/third/derivadas'
         />
       </StyledView>
     </ScrollView>
-  )
-}
-function Unit ({
-  title,
-  front,
-  to
-}) {
-  return (
-    <StyledLink
-      to={to}
-    >
-      <StyledView
-        className='p-2 pt-3 mt-3 items-center'
-      >
-        <StyledView className='w-20 absolute z-10 mt-5 rounded shadow bg-purple-900'>
-          <StyledText className='text-center text-purple-100'>Basic</StyledText>
-        </StyledView>
-        <StyledView>
-          <StyledImage source={{ uri: front }} className='w-32 h-32 rounded' />
-        </StyledView>
-        <StyledView className='flex-row justify-between'>
-          <StyledText className='text-xl mt-1 text-center ml-5 mr-5'>{title}</StyledText>
-        </StyledView>
-      </StyledView>
-    </StyledLink>
   )
 }

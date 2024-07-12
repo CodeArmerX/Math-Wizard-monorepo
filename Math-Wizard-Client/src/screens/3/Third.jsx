@@ -1,11 +1,12 @@
 import { ScrollView } from 'react-native'
-import { StyledView, StyledText, StyledLink, StyledImage } from '../../components/StyledComponents'
+import { Unit } from '../../components/Unit'
+import { StyledView, StyledText } from '../../components/StyledComponents'
 export function ThirdYear () {
   return (
     <ScrollView>
-      <StyledView className='pb-28'>
+      <StyledView className='pb-28 ml-4 mr-4'>
 
-        <StyledText className='text-2xl text-center mt-10'>Third Year Units</StyledText>
+        <StyledText className='text-3xl text-center mt-10 font-bold text-violet-800'>Third Year Units</StyledText>
         <Unit
           title='Radicación en R'
           front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
@@ -23,40 +24,25 @@ export function ThirdYear () {
         />
         <Unit
           title='Sistemas lineales'
-          front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
+          front='https://images.pexels.com/photos/6238050/pexels-photo-6238050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
           to='/courses/third/sistemas'
         />
         <Unit
           title='Función cuadrática'
-          front='https://www.caosyciencia.com/wp-content/uploads/2023/09/raiz-cuadrada.jpg'
+          front='https://www.shutterstock.com/image-illustration/formula-bhaskara-illustration-high-school-600nw-2041002368.jpg'
           to='/courses/third/funcion'
+        />
+        <Unit
+          title='Geometría Elemental'
+          front='https://definicion.de/wp-content/uploads/2009/02/geometria-1.jpg'
+          to='/courses/third/geometria'
+        />
+        <Unit
+          title='Estadística'
+          front='https://economipedia.com/wp-content/uploads/Estadistica-2.jpg'
+          to='/courses/third/estadistica'
         />
       </StyledView>
     </ScrollView>
-  )
-}
-function Unit ({
-  title,
-  front,
-  to
-}) {
-  return (
-    <StyledLink
-      to={to}
-    >
-      <StyledView
-        className='p-2 pt-3 mt-3 items-center'
-      >
-        <StyledView className='w-20 absolute z-10 mt-5 rounded shadow bg-purple-900'>
-          <StyledText className='text-center text-purple-100'>Basic</StyledText>
-        </StyledView>
-        <StyledView>
-          <StyledImage source={{ uri: front }} className='w-32 h-32 rounded' />
-        </StyledView>
-        <StyledView className='flex-row justify-between'>
-          <StyledText className='text-xl mt-1 text-center ml-5 mr-5'>{title}</StyledText>
-        </StyledView>
-      </StyledView>
-    </StyledLink>
   )
 }

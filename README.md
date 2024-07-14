@@ -7,6 +7,10 @@ Una aplicación mobile para resolver el problema del estudio matemático
 
 ## Desarrollado con metodología Scrum
 
+## Todos los Sprints estan en cada uno de los commits de este repositorio
+
+## Horas de trabajo estimadas: 320 Horas
+
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
